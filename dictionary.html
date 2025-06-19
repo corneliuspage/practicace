@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticAce - Science Dictionary</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #F8F5F0; /* Soft ivory */
+            color: #333333; /* Charcoal gray */
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+        
+        /* Color Variables */
+        :root {
+            --deep-cobalt: #0047AB;
+            --vibrant-orange: #FF7F11;
+            --leafy-green: #4CAF50;
+            --charcoal-gray: #333333;
+            --soft-ivory: #F8F5F0;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1001;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .side-menu.active {
+            right: 0;
+        }
+        
+        .side-menu ul {
+            list-style: none;
+            margin-top: 60px;
+        }
+        
+        .side-menu li {
+            margin-bottom: 20px;
+        }
+        
+        .side-menu a {
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .side-menu a:hover {
+            color: var(--deep-cobalt);
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Content Sections */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: var(--deep-cobalt);
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--vibrant-orange);
+            padding-bottom: 10px;
+        }
+        
+        /* Dictionary Search */
+        .search-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .search-box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-input:focus {
+            border-color: var(--deep-cobalt);
+        }
+        
+        .search-btn {
+            background-color: var(--deep-cobalt);
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 5px 5px 0;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-btn:hover {
+            background-color: #00367d;
+        }
+        
+        /* Results Section */
+        .results-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 200px;
+            display: none; /* Hidden by default */
+        }
+        
+        .term-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--leafy-green);
+        }
+        
+        .term-name {
+            font-size: 28px;
+            color: var(--deep-cobalt);
+        }
+        
+        .term-type {
+            background-color: var(--vibrant-orange);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .term-definition {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .term-example {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid var(--leafy-green);
+            font-style: italic;
+            margin: 20px 0;
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            padding: 40px 0;
+        }
+        
+        /* Loading Animation */
+        .loader {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .loader-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--deep-cobalt);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .contact-info a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .search-btn {
+                border-radius: 5px;
+                padding: 12px;
+            }
+            
+            .term-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .term-type {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">PracticAce</a>
+        <div class="menu-icon" id="menuIcon">☰</div>
+    </header>
+    
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <div class="close-menu" id="closeMenu">×</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission-vision.html">Mission and Vision</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="lab-manual.html">Lab Manual</a></li>
+            <li><a href="practical-videos.html">Practical Videos</a></li>
+            <li><a href="dictionary.html">Dictionary</a></li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Science Dictionary</h1>
+        
+        <div class="search-container">
+            <h2>Search for Science Terms</h2>
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="Enter a science term...">
+                <button class="search-btn" id="searchBtn">Search</button>
+            </div>
+            <p>Look up definitions for physics, chemistry, and biology terms</p>
+        </div>
+        
+        <div class="loader" id="loader">
+            <div class="loader-spinner"></div>
+            <p>Searching...</p>
+        </div>
+        
+        <div class="results-container" id="resultsContainer">
+            <!-- Results will be displayed here -->
+            <div class="no-results" id="noResults">
+                No results found. Try searching for a science term.
+            </div>
+            
+            <div id="resultsContent" style="display: none;">
+                <div class="term-header">
+                    <h2 class="term-name" id="termName">Term</h2>
+                    <span class="term-type" id="termType">noun</span>
+                </div>
+                <div class="term-definition" id="termDefinition">
+                    Definition will appear here...
+                </div>
+                <div class="term-example" id="termExample">
+                    Example usage will appear here...
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mission-vision.html">Mission and Vision</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="lab-manual.html">Lab Manual</a></li>
+                    <li><a href="practical-videos.html">Practical Videos</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                </ul>
+            </div>
+            <div class="footer-links contact-info">
+                <h3>Contact Us</h3>
+                <a href="tel:08080164223">08080164223</a>
+                <a href="tel:09165452817">09165452817</a>
+                <a href="mailto:PracticAce@gmail.com">PracticAce@gmail.com</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 PracticAce. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Menu Toggle
+        const menuIcon = document.getElementById('menuIcon');
+        const closeMenu = document.getElementById('closeMenu');
+        const sideMenu = document.getElementById('sideMenu');
+        
+        menuIcon.addEventListener('click', () => {
+            sideMenu.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            sideMenu.classList.remove('active');
+        });
+        
+        // Dictionary Search Functionality
+        const searchBtn = document.getElementById('searchBtn');
+        const searchInput = document.getElementById('searchInput');
+        const loader = document.getElementById('loader');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const resultsContent = document.getElementById('resultsContent');
+        const noResults = document.getElementById('noResults');
+        const termName = document.getElementById('termName');
+        const termType = document.getElementById('termType');
+        const termDefinition = document.getElementById('termDefinition');
+        const termExample = document.getElementById('termExample');
+        
+        // Using the WordsAPI from RapidAPI (you'll need to sign up for an API key)
+        async function searchTerm(term) {
+            // Show loading state
+            loader.style.display = 'block';
+            resultsContainer.style.display = 'block';
+            resultsContent.style.display = 'none';
+            noResults.style.display = 'none';
+            
+            try {
+                // In a real implementation, you would call your API here
+                // This is a simulation with sample data
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API delay
+                
+                // Sample data - in production you would use actual API response
+                const sampleData = {
+                    "term": term.toLowerCase(),
+                    "definition": getSampleDefinition(term),
+                    "type": getSampleType(term),
+                    "example": getSampleExample(term)
+                };
+                
+                if (sampleData.definition) {
+                    // Display results
+                    termName.textContent = sampleData.term.charAt(0).toUpperCase() + sampleData.term.slice(1);
+                    termType.textContent = sampleData.type;
+                    termDefinition.textContent = sampleData.definition;
+                    termExample.textContent = sampleData.example;
+                    
+                    resultsContent.style.display = 'block';
+                    noResults.style.display = 'none';
+                } else {
+                    // No results found
+                    resultsContent.style.display = 'none';
+                    noResults.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                resultsContent.style.display = 'none';
+                noResults.style.display = 'block';
+                noResults.textContent = 'Error loading results. Please try again.';
+            } finally {
+                loader.style.display = 'none';
+            }
+        }
+        
+        // Sample data functions - replace with actual API calls
+        function getSampleDefinition(term) {
+            const definitions = {
+                "photosynthesis": "The process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll, converting carbon dioxide and water into glucose and releasing oxygen.",
+                "osmosis": "The movement of water molecules through a semi-permeable membrane from an area of higher water concentration to an area of lower water concentration.",
+                "mitosis": "A type of cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent nucleus.",
+                "acceleration": "The rate of change of velocity of an object with respect to time, measured in meters per second squared (m/s²).",
+                "catalyst": "A substance that increases the rate of a chemical reaction without itself undergoing any permanent chemical change."
+            };
+            return definitions[term.toLowerCase()] || null;
+        }
+        
+        function getSampleType(term) {
+            const types = {
+                "photosynthesis": "noun",
+                "osmosis": "noun",
+                "mitosis": "noun",
+                "acceleration": "noun",
+                "catalyst": "noun"
+            };
+            return types[term.toLowerCase()] || "noun";
+        }
+        
+        function getSampleExample(term) {
+            const examples = {
+                "photosynthesis": "During photosynthesis, plants absorb sunlight through their leaves and convert carbon dioxide from the air into oxygen and glucose.",
+                "osmosis": "Water moves into plant root cells by osmosis when the soil has a higher water concentration than the root cells.",
+                "mitosis": "Mitosis is essential for growth and repair in multicellular organisms, allowing cells to divide and produce genetically identical daughter cells.",
+                "acceleration": "When a car speeds up from 0 to 60 km/h in 5 seconds, it has an acceleration of 12 km/h per second.",
+                "catalyst": "Enzymes act as biological catalysts in metabolic reactions, speeding up reactions without being consumed."
+            };
+            return examples[term.toLowerCase()] || "No example available for this term.";
+        }
+        
+        // Event listeners
+        searchBtn.addEventListener('click', () => {
+            const term = searchInput.value.trim();
+            if (term) {
+                searchTerm(term);
+            }
+        });
+        
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const term = searchInput.value.trim();
+                if (term) {
+                    searchTerm(term);
+                }
+            }
+        });
+        
+        // Initialize with empty results container
+        resultsContainer.style.display = 'none';
+    </script>
+</body>
+</html>

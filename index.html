@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticAce - Home</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #F8F5F0; /* Soft ivory */
+            color: #333333; /* Charcoal gray */
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+        
+        /* Color Variables */
+        :root {
+            --deep-cobalt: #0047AB;
+            --vibrant-orange: #FF7F11;
+            --leafy-green: #4CAF50;
+            --charcoal-gray: #333333;
+            --soft-ivory: #F8F5F0;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1001;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .side-menu.active {
+            right: 0;
+        }
+        
+        .side-menu ul {
+            list-style: none;
+            margin-top: 60px;
+        }
+        
+        .side-menu li {
+            margin-bottom: 20px;
+        }
+        
+        .side-menu a {
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .side-menu a:hover {
+            color: var(--deep-cobalt);
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Banner Slider */
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 150px;
+        }
+        
+        .banner-slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner-slide.active {
+            opacity: 1;
+        }
+        
+        .banner-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+        
+        .indicator.active {
+            background-color: white;
+        }
+        
+        /* Content Sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h1, h2, h3 {
+            color: var(--deep-cobalt);
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--vibrant-orange);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        /* Call to Action */
+        .cta {
+            display: inline-block;
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .cta:hover {
+            background-color: #00367d;
+        }
+        
+        /* Video Section */
+        .video-section {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 20px;
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        .video-section::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .video-container {
+            display: inline-flex;
+            gap: 20px;
+        }
+        
+        .video-card {
+            width: 280px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            white-space: normal;
+            vertical-align: top;
+        }
+        
+        .video-thumbnail {
+            width: 100%;
+            height: 160px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-info {
+            padding: 15px;
+        }
+        
+        .video-info h3 {
+            color: var(--charcoal-gray);
+            font-size: 18px;
+            margin-bottom: 10px;
+            white-space: normal;
+        }
+        
+        .video-info p {
+            color: #666;
+            font-size: 14px;
+            white-space: normal;
+        }
+        
+        .see-all {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 160px;
+            background-color: var(--leafy-green);
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .see-all:hover {
+            background-color: #3e8e41;
+        }
+        
+        /* Dictionary Section */
+        .dictionary-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-btn {
+            background-color: var(--vibrant-orange);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-btn:hover {
+            background-color: #e67310;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .contact-info a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">PracticAce</a>
+        <div class="menu-icon" id="menuIcon">☰</div>
+    </header>
+    
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <div class="close-menu" id="closeMenu">×</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission-vision.html">Mission and Vision</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="lab-manual.html">Lab Manual</a></li>
+            <li><a href="practical-videos.html">Practical Videos</a></li>
+            <li><a href="dictionary.html">Dictionary</a></li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Banner Slider -->
+        <section class="banner-container" id="bannerContainer">
+            <div class="banner-slide active" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="banner-content"></div>
+            </div>
+            <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="banner-content"></div>
+            </div>
+            <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="banner-content"></div>
+            </div>
+            <div class="banner-indicators" id="bannerIndicators">
+                <div class="indicator active" data-slide="0"></div>
+                <div class="indicator" data-slide="1"></div>
+                <div class="indicator" data-slide="2"></div>
+            </div>
+        </section>
+        
+        <!-- Order CTA -->
+        <section>
+            <a href="shop.html" class="cta">Order a PracticAce Kit to continue</a>
+        </section>
+        
+        <!-- Why PracticAce -->
+        <section>
+            <h2>Why PracticAce</h2>
+            <p>PracticAce offers a comprehensive lab manual with WAEC standard practicals, a basic lab kit that is sufficient to carry out every experiment in the manual and videos to guide you while doing the experiments. In addition, if you still have questions or need explanation on anything related to the lab experiments, there are comment sections under each video where you can ask and get answers from many other users, including team members at PracticAce.</p>
+        </section>
+        
+        <!-- Watch Videos -->
+        <section>
+            <h2>Watch Videos</h2>
+            <div class="video-section">
+                <div class="video-container">
+                    <a href="practical-videos.html" class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://i.ytimg.com/vi/7u3dZ0t2Q4I/maxresdefault.jpg" alt="Physics Practical">
+                        </div>
+                        <div class="video-info">
+                            <h3>Measuring Acceleration Due to Gravity</h3>
+                            <p>Learn how to use a simple pendulum to determine the value of g in this comprehensive physics practical.</p>
+                        </div>
+                    </a>
+                    <a href="practical-videos.html" class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://i.ytimg.com/vi/2Y1H7XTmmkM/maxresdefault.jpg" alt="Chemistry Practical">
+                        </div>
+                        <div class="video-info">
+                            <h3>Titration: Acid-Base Neutralization</h3>
+                            <p>Step-by-step guide to performing accurate titration experiments with proper technique.</p>
+                        </div>
+                    </a>
+                                        <a href="practical-videos.html" class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://i.ytimg.com/vi/9U1Ij1L9K2Q/maxresdefault.jpg" alt="Biology Practical">
+                        </div>
+                        <div class="video-info">
+                            <h3>Examining Plant Cells Under Microscope</h3>
+                            <p>How to prepare and observe onion cells under a microscope with proper staining techniques.</p>
+                        </div>
+                    </a>
+                    <a href="practical-videos.html" class="see-all">See All Videos</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dictionary Section -->
+        <section class="dictionary-section">
+            <h2>Don't know the meaning of a science word?</h2>
+            <a href="dictionary.html" class="search-btn">Search Here</a>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mission-vision.html">Mission and Vision</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="lab-manual.html">Lab Manual</a></li>
+                    <li><a href="practical-videos.html">Practical Videos</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                </ul>
+            </div>
+            <div class="footer-links contact-info">
+                <h3>Contact Us</h3>
+                <a href="tel:08080164223">08080164223</a>
+                <a href="tel:09165452817">09165452817</a>
+                <a href="mailto:PracticAce@gmail.com">PracticAce@gmail.com</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 PracticAce. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Menu Toggle
+        const menuIcon = document.getElementById('menuIcon');
+        const closeMenu = document.getElementById('closeMenu');
+        const sideMenu = document.getElementById('sideMenu');
+        
+        menuIcon.addEventListener('click', () => {
+            sideMenu.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            sideMenu.classList.remove('active');
+        });
+        
+        // Banner Slider
+        const bannerContainer = document.getElementById('bannerContainer');
+        const slides = document.querySelectorAll('.banner-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+            
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Auto-rotate slides every 3 seconds
+        let slideInterval = setInterval(nextSlide, 3000);
+        
+        // Pause on hover
+        bannerContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        bannerContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, 3000);
+        });
+        
+        // Click on indicators
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                const slideIndex = parseInt(indicator.getAttribute('data-slide'));
+                showSlide(slideIndex);
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 3000);
+            });
+        });
+    </script>
+</body>
+</html>

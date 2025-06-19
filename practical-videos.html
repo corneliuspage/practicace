@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticAce - Practical Videos</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #F8F5F0; /* Soft ivory */
+            color: #333333; /* Charcoal gray */
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+        
+        /* Color Variables */
+        :root {
+            --deep-cobalt: #0047AB;
+            --vibrant-orange: #FF7F11;
+            --leafy-green: #4CAF50;
+            --charcoal-gray: #333333;
+            --soft-ivory: #F8F5F0;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1001;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .side-menu.active {
+            right: 0;
+        }
+        
+        .side-menu ul {
+            list-style: none;
+            margin-top: 60px;
+        }
+        
+        .side-menu li {
+            margin-bottom: 20px;
+        }
+        
+        .side-menu a {
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .side-menu a:hover {
+            color: var(--deep-cobalt);
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Content Sections */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: var(--deep-cobalt);
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--vibrant-orange);
+            padding-bottom: 10px;
+        }
+        
+        /* Subject Tabs */
+        .subject-tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            background-color: #eee;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn:first-child {
+            border-top-left-radius: 8px;
+        }
+        
+        .tab-btn:last-child {
+            border-top-right-radius: 8px;
+        }
+        
+        .tab-btn.active {
+            background-color: var(--deep-cobalt);
+            color: white;
+        }
+        
+        .tab-btn.physics.active {
+            background-color: #4285F4; /* Physics blue */
+        }
+        
+        .tab-btn.chemistry.active {
+            background-color: #EA4335; /* Chemistry red */
+        }
+        
+        .tab-btn.biology.active {
+            background-color: #34A853; /* Biology green */
+        }
+        
+        /* Video List */
+        .video-list {
+            display: none;
+        }
+        
+        .video-list.active {
+            display: block;
+        }
+        
+        .video-item {
+            display: flex;
+            margin-bottom: 30px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-thumbnail {
+            width: 300px;
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-icon::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid var(--deep-cobalt);
+            margin-left: 5px;
+        }
+        
+        .video-info {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        .video-info h3 {
+            color: var(--deep-cobalt);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .video-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .video-meta {
+            display: flex;
+            gap: 15px;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .contact-info a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+@media (max-width: 768px) {
+        .video-item {
+        flex-direction: column;
+    }
+    
+        .video-thumbnail {
+        width: 100%;
+        height: 200px;
+    }
+    
+        .video-info {
+        padding: 15px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">PracticAce</a>
+        <div class="menu-icon" id="menuIcon">☰</div>
+    </header>
+    
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <div class="close-menu" id="closeMenu">×</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission-vision.html">Mission and Vision</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="lab-manual.html">Lab Manual</a></li>
+            <li><a href="practical-videos.html">Practical Videos</a></li>
+            <li><a href="dictionary.html">Dictionary</a></li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Practical Videos</h1>
+        
+        <!-- Subject Tabs -->
+        <div class="subject-tabs">
+            <button class="tab-btn physics active" data-tab="physics">Physics</button>
+            <button class="tab-btn chemistry" data-tab="chemistry">Chemistry</button>
+            <button class="tab-btn biology" data-tab="biology">Biology</button>
+        </div>
+        
+        <!-- Physics Videos -->
+        <div class="video-list active" id="physics-videos">
+            <!-- Video 1 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/7u3dZ0t2Q4I/maxresdefault.jpg" alt="Physics Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Measuring Acceleration Due to Gravity</h3>
+                    <p>Learn how to use a simple pendulum to determine the value of g in this comprehensive physics practical demonstration. Covers setup, measurements, calculations, and error analysis.</p>
+                    <div class="video-meta">
+                        <span>Duration: 12:45</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/9U1Ij1L9K2Q/maxresdefault.jpg" alt="Physics Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Ohm's Law Verification</h3>
+                    <p>Step-by-step guide to verifying Ohm's Law using standard lab equipment. Includes circuit setup, taking measurements, plotting graphs, and interpreting results.</p>
+                    <div class="video-meta">
+                        <span>Duration: 18:30</span>
+                     
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 3 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/2Y1H7XTmmkM/maxresdefault.jpg" alt="Physics Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Determining Focal Length of Lenses</h3>
+                    <p>Complete demonstration of determining the focal length of convex and concave lenses using different methods as required by WAEC practical examinations.</p>
+                    <div class="video-meta">
+                        <span>Duration: 15:12</span>
+                     
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 4 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/9U1Ij1L9K2Q/maxresdefault.jpg" alt="Physics Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Hooke's Law Experiment</h3>
+                    <p>Detailed demonstration of investigating the relationship between force and extension of a spring. Covers proper measurement techniques and graphical analysis.</p>
+                    <div class="video-meta">
+                        <span>Duration: 14:05</span>
+                      
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 5 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/7u3dZ0t2Q4I/maxresdefault.jpg" alt="Physics Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Determining the Relative Density of Liquids</h3>
+                    <p>Practical demonstration of using the density bottle method to determine the relative density of different liquids with precision.</p>
+                    <div class="video-meta">
+                        <span>Duration: 16:40</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chemistry Videos -->
+        <div class="video-list" id="chemistry-videos">
+            <!-- Video 1 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/2Y1H7XTmmkM/maxresdefault.jpg" alt="Chemistry Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Titration: Acid-Base Neutralization</h3>
+                    <p>Complete guide to performing accurate titration experiments with proper technique, including burette reading, endpoint detection, and calculations.</p>
+                    <div class="video-meta">
+                        <span>Duration: 20:15</span>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/7u3dZ0t2Q4I/maxresdefault.jpg" alt="Chemistry Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Qualitative Analysis of Salts</h3>
+                    <p>Systematic approach to identifying cations and anions in unknown salts through chemical tests and observations.</p>
+                    <div class="video-meta">
+                        <span>Duration: 22:30</span>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 3 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/9U1Ij1L9K2Q/maxresdefault.jpg" alt="Chemistry Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Determining Rate of Reaction</h3>
+                    <p>Demonstration of measuring reaction rates using different methods, including volume of gas evolved and color change monitoring.</p>
+                    <div class="video-meta">
+                        <span>Duration: 17:45</span>
+                      
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 4 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/2Y1H7XTmmkM/maxresdefault.jpg" alt="Chemistry Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Preparation of Standard Solutions</h3>
+                    <p>Step-by-step guide to preparing accurate standard solutions using both the weighing method and dilution method.</p>
+                    <div class="video-meta">
+                        <span>Duration: 15:20</span>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 5 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/7u3dZ0t2Q4I/maxresdefault.jpg" alt="Chemistry Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Determining Heat of Neutralization</h3>
+                    <p>Practical demonstration of calorimetry techniques to determine the heat change during acid-base neutralization reactions.</p>
+                    <div class="video-meta">
+                        <span>Duration: 19:10</span>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Biology Videos -->
+        <div class="video-list" id="biology-videos">
+            <!-- Video 1 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/9U1Ij1L9K2Q/maxresdefault.jpg" alt="Biology Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Examining Plant Cells Under Microscope</h3>
+                    <p>How to prepare and observe onion cells under a microscope with proper staining techniques and biological drawing conventions.</p>
+                    <div class="video-meta">
+                        <span>Duration: 14:25</span>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/2Y1H7XTmmkM/maxresdefault.jpg" alt="Biology Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Testing for Food Substances</h3>
+                    <p>Comprehensive demonstration of biochemical tests for starch, reducing sugars, proteins, and fats with proper controls.</p>
+                    <div class="video-meta">
+                        <span>Duration: 18:15</span>
+                      
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 3 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://i.ytimg.com/vi/7u3dZ0t2Q4I/maxresdefault.jpg" alt="Biology Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Ecological Survey Techniques</h3>
+                    <p>Field methods for studying plant populations including quadrat sampling, transect techniques, and biodiversity calculations.</p>
+                    <div class="video-meta">
+                        <span>Duration: 22:40</span>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 4 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Biology Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Enzyme Activity Experiments</h3>
+                    <p>Investigating factors affecting enzyme activity including temperature and pH.</p>
+                    <div class="video-meta">
+                        <span>Duration: 18:15</span>
+                      
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 5 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1581093057305-25a1b583d4fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Biology Practical">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="video-info">
+                    <h3>Heart Dissection</h3>
+                    <p>Step-by-step guide to dissecting and identifying structures of a mammalian heart.</p>
+                    <div class="video-meta">
+                        <span>Duration: 19:50</span>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mission-vision.html">Mission and Vision</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="lab-manual.html">Lab Manual</a></li>
+                    <li><a href="practical-videos.html">Practical Videos</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                </ul>
+            </div>
+            <div class="footer-links contact-info">
+                <h3>Contact Us</h3>
+                <a href="tel:08080164223">08080164223</a>
+                <a href="tel:09165452817">09165452817</a>
+                <a href="mailto:PracticAce@gmail.com">PracticAce@gmail.com</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 PracticAce. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Menu Toggle
+        const menuIcon = document.getElementById('menuIcon');
+        const closeMenu = document.getElementById('closeMenu');
+        const sideMenu = document.getElementById('sideMenu');
+        
+        menuIcon.addEventListener('click', () => {
+            sideMenu.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            sideMenu.classList.remove('active');
+        });
+        
+        // Tab Switching
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const videoLists = document.querySelectorAll('.video-list');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and lists
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                videoLists.forEach(list => list.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding video list
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(`${tabId}-videos`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

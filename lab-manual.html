@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticAce - Lab Manual</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #F8F5F0; /* Soft ivory */
+            color: #333333; /* Charcoal gray */
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+        
+        /* Color Variables */
+        :root {
+            --deep-cobalt: #0047AB;
+            --vibrant-orange: #FF7F11;
+            --leafy-green: #4CAF50;
+            --charcoal-gray: #333333;
+            --soft-ivory: #F8F5F0;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1001;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .side-menu.active {
+            right: 0;
+        }
+        
+        .side-menu ul {
+            list-style: none;
+            margin-top: 60px;
+        }
+        
+        .side-menu li {
+            margin-bottom: 20px;
+        }
+        
+        .side-menu a {
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .side-menu a:hover {
+            color: var(--deep-cobalt);
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Content Sections */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1, h2, h3 {
+            color: var(--deep-cobalt);
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            border-bottom: 3px solid var(--vibrant-orange);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        /* Manual Items */
+        .manual-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .manual-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .manual-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .manual-preview {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .manual-info {
+            padding: 20px;
+        }
+        
+        .manual-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--deep-cobalt);
+        }
+        
+        .manual-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: var(--leafy-green);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #3e8e41;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .contact-info a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">PracticAce</a>
+        <div class="menu-icon" id="menuIcon">☰</div>
+    </header>
+    
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <div class="close-menu" id="closeMenu">×</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission-vision.html">Mission and Vision</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="lab-manual.html">Lab Manual</a></li>
+            <li><a href="practical-videos.html">Practical Videos</a></li>
+            <li><a href="dictionary.html">Dictionary</a></li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Lab Manual</h1>
+        
+        <div class="manual-list">
+            <!-- Physics Manual -->
+            <div class="manual-item">
+                <div class="manual-preview" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <div class="manual-overlay"></div>
+                </div>
+                <div class="manual-info">
+                    <h3>Physics Practical Manual</h3>
+                    <p>Complete guide to WAEC-standard physics practicals including mechanics, electricity, and wave experiments.</p>
+                    <a href="physics-manual.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+            </div>
+            
+            <!-- Chemistry Manual -->
+            <div class="manual-item">
+                <div class="manual-preview" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <div class="manual-overlay"></div>
+                </div>
+                <div class="manual-info">
+                    <h3>Chemistry Practical Manual</h3>
+                    <p>Step-by-step instructions for all required chemistry experiments including titrations and qualitative analysis.</p>
+                    <a href="chemistry-manual.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+            </div>
+            
+            <!-- Biology Manual -->
+            <div class="manual-item">
+                <div class="manual-preview" style="background-image: url('https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <div class="manual-overlay"></div>
+                </div>
+                <div class="manual-info">
+                    <h3>Biology Practical Manual</h3>
+                    <p>Comprehensive guide to biological drawings, microscope work, and physiological experiments.</p>
+                    <a href="biology-manual.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mission-vision.html">Mission and Vision</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="lab-manual.html">Lab Manual</a></li>
+                    <li><a href="practical-videos.html">Practical Videos</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                </ul>
+            </div>
+            <div class="footer-links contact-info">
+                <h3>Contact Us</h3>
+                <a href="tel:08080164223">08080164223</a>
+                <a href="tel:09165452817">09165452817</a>
+                <a href="mailto:PracticAce@gmail.com">PracticAce@gmail.com</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 PracticAce. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Menu Toggle
+        const menuIcon = document.getElementById('menuIcon');
+        const closeMenu = document.getElementById('closeMenu');
+        const sideMenu = document.getElementById('sideMenu');
+        
+        menuIcon.addEventListener('click', () => {
+            sideMenu.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            sideMenu.classList.remove('active');
+        });
+
+        // PDF Download Simulation
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // In a real implementation, this would download the actual PDF
+                // For demo purposes, we'll just show an alert
+                const manualName = this.parentElement.querySelector('h3').textContent;
+                alert(`In a live site, this would download the ${manualName} PDF`);
+                
+                // Prevent actual navigation (since our PDFs don't exist in this demo)
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
