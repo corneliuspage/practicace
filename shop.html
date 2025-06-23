@@ -344,6 +344,18 @@
             left: 0;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Proper initialization for EmailJS v4
+        emailjs.init({
+            publicKey: "8pHs_YhKgBLIpJDmq",
+            blockHeadless: true,
+            limitRate: {
+                id: 'PracticAceShop',
+                throttle: 10000 // 10 seconds
+            }
+        });
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -465,93 +477,83 @@
     </footer>
     
     <script>
-        // Menu Toggle
-        const menuIcon = document.getElementById('menuIcon');
-        const closeMenu = document.getElementById('closeMenu');
-        const sideMenu = document.getElementById('sideMenu');
+    // Menu Toggle
+    const menuIcon = document.getElementById('menuIcon');
+    const closeMenu = document.getElementById('closeMenu');
+    const sideMenu = document.getElementById('sideMenu');
+    
+    menuIcon.addEventListener('click', () => {
+        sideMenu.classList.add('active');
+    });
+    
+    closeMenu.addEventListener('click', () => {
+        sideMenu.classList.remove('active');
+    });
+    
+    // Price Calculator
+    const kitsInput = document.getElementById('kits');
+    const totalPrice = document.getElementById('totalPrice');
+    const unitPrice = 80000;
+    
+    kitsInput.addEventListener('input', updateTotalPrice);
+    
+    function updateTotalPrice() {
+        const quantity = parseInt(kitsInput.value) || 0;
+        const total = quantity * unitPrice;
+        totalPrice.textContent = `Total: ₦${total.toLocaleString()}`;
+    }
+    
+    // EmailJS Form Submission (Improved)
+    const orderForm = document.getElementById('orderForm');
+    const successMessage = document.getElementById('successMessage');
+    const submitBtn = document.querySelector('.submit-btn');
+    
+    orderForm.addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        menuIcon.addEventListener('click', () => {
-            sideMenu.classList.add('active');
-        });
+        // Disable button during submission
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
         
-        closeMenu.addEventListener('click', () => {
-            sideMenu.classList.remove('active');
-        });
+        // Prepare form data
+        const formData = {
+            schoolName: document.getElementById('schoolName').value,
+            contactPerson: document.getElementById('contactPerson').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            address: document.getElementById('address').value,
+            kits: document.getElementById('kits').value,
+            totalPrice: document.getElementById('totalPrice').textContent,
+            date: new Date().toLocaleString()
+        };
         
-        // Price Calculator
-        const kitsInput = document.getElementById('kits');
-        const totalPrice = document.getElementById('totalPrice');
-        const unitPrice = 80000;
+        console.log('Form Data:', formData); // For debugging
         
-        kitsInput.addEventListener('input', updateTotalPrice);
-        
-        function updateTotalPrice() {
-            const quantity = parseInt(kitsInput.value) || 0;
-            const total = quantity * unitPrice;
-            totalPrice.textContent = `Total: ₦${total.toLocaleString()}`;
-        }
-        
-        // Form Submission
-        const orderForm = document.getElementById('orderForm');
-        const successMessage = document.getElementById('successMessage');
-        
-        orderForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Collect form data
-            const formData = {
-                schoolName: document.getElementById('schoolName').value,
-                contactPerson: document.getElementById('contactPerson').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                address: document.getElementById('address').value,
-                kits: document.getElementById('kits').value,
-                totalPrice: document.getElementById('totalPrice').textContent,
-                date: new Date().toLocaleString()
-            };
-            
-            // In a real implementation, you would send this data to your server
-            // Here we'll simulate it with a timeout
-            console.log('Order submitted:', formData);
-            
-            // Show success message
+        // Send email via EmailJS (corrected service ID)
+        emailjs.send(
+            'service_hadgs7n', // Corrected service ID
+            'template_hxwnz3x',
+            formData
+        )
+        .then((response) => {
+            console.log('Email sent successfully:', response);
             successMessage.style.display = 'block';
-            
-            // Scroll to success message
             successMessage.scrollIntoView({ behavior: 'smooth' });
-            
-            // Reset form after delay
-            setTimeout(() => {
-                orderForm.reset();
-                updateTotalPrice();
-            }, 3000);
-            
-            // In production, replace with actual form submission code
-            // Example using Fetch API:
-            /*
-            fetch('your-server-endpoint', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                successMessage.style.display = 'block';
-                orderForm.reset();
-                updateTotalPrice();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-            */
+            orderForm.reset();
+            updateTotalPrice();
+        })
+        .catch((error) => {
+            console.error('Full error details:', error);
+            alert(`Failed to send order: ${error.text || 'Please check console for details'}`);
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Order Now';
         });
+    });
 
-        // Initialize price display
-        updateTotalPrice();
-    </script>
+    // Initialize price display
+    updateTotalPrice();
+</script>
 </body>
 </html>
-
-.
