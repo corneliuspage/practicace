@@ -1,0 +1,2507 @@
+{
+  "photosynthesis": {
+    "term": "Photosynthesis",
+    "phonetic": "/ˌfoʊ.t̬oʊˈsɪn.θə.sɪs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The process by which green plants and some other organisms use sunlight to synthesize foods from carbon dioxide and water.",
+            "example": "Photosynthesis in plants generally involves the green pigment chlorophyll."
+          }
+        ]
+      }
+    ]
+  },
+  "mitosis": {
+    "term": "Mitosis",
+    "phonetic": "/maɪˈtoʊ.sɪs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A type of cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent nucleus.",
+            "example": "Mitosis is essential for the growth and repair of tissues."
+          }
+        ]
+      }
+    ]
+  },
+  "gravity": {
+    "term": "Gravity",
+    "phonetic": "/ˈɡræv.ə.ti/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The force that attracts a body toward the center of the earth, or toward any other physical body having mass.",
+            "example": "The gravity of the moon causes the ocean tides on Earth."
+          }
+        ]
+      }
+    ]
+  },
+  "enzyme": {
+    "term": "Enzyme",
+    "phonetic": "/ˈen.zaɪm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A substance produced by a living organism which acts as a catalyst to bring about a specific biochemical reaction.",
+            "example": "Digestive enzymes break down food in the human stomach."
+          }
+        ]
+      }
+    ]
+  },
+  "acceleration": {
+    "term": "Acceleration",
+    "phonetic": "/əkˌseləˈreɪʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The rate of change of velocity per unit time.",
+            "example": "The car increased its acceleration to overtake the truck."
+          }
+        ]
+      }
+    ]
+  },
+  "amplitude": {
+    "term": "Amplitude",
+    "phonetic": "/ˈæm.plɪ.tjuːd/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The maximum extent of a vibration or oscillation, measured from the position of equilibrium.",
+            "example": "A loud sound has a larger amplitude than a soft sound."
+          }
+        ]
+      }
+    ]
+  },
+  "atom": {
+    "term": "Atom",
+    "phonetic": "/ˈæt.əm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The basic unit of a chemical element, consisting of a nucleus and one or more electrons.",
+            "example": "An atom is the smallest unit of ordinary matter."
+          }
+        ]
+      }
+    ]
+  },
+  "angularVelocity": {
+    "term": "Angular Velocity",
+    "phonetic": "/ˈæŋ.ɡjə.lər vəˈlɒs.ə.ti/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The rate of change of angular displacement with respect to time.",
+            "example": "The spinning wheel had a high angular velocity."
+          }
+        ]
+      }
+    ]
+  },
+  "airResistance": {
+    "term": "Air Resistance",
+    "phonetic": "/ɛər rɪˈzɪs.təns/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A force acting opposite to the relative motion of any object moving with respect to a surrounding fluid.",
+            "example": "Parachutes work by increasing air resistance."
+          }
+        ]
+      }
+    ]
+  },
+  "archimedesPrinciple": {
+    "term": "Archimedes' Principle",
+    "phonetic": "/ˌɑː.kɪˈmiː.diːz ˈprɪn.sə.pəl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A principle stating that a body immersed in a fluid is buoyed up by a force equal to the weight of the displaced fluid.",
+            "example": "Archimedes' principle explains why ships float."
+          }
+        ]
+      }
+    ]
+  },
+  "alternatingCurrent": {
+    "term": "Alternating Current",
+    "phonetic": "/ˈɔːl.tə.neɪ.tɪŋ ˈkʌr.ənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An electric current that reverses its direction at regular intervals.",
+            "example": "The electricity in homes is supplied as alternating current (AC)."
+          }
+        ]
+      }
+    ]
+  },
+  "alphaParticle": {
+    "term": "Alpha Particle",
+    "phonetic": "/ˈæl.fə ˈpɑː.tɪ.kəl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A positively charged particle consisting of two protons and two neutrons, emitted in radioactive decay.",
+            "example": "Alpha particles are emitted during the decay of uranium."
+          }
+        ]
+      }
+    ]
+  },
+  "angularDisplacement": {
+    "term": "Angular Displacement",
+    "phonetic": "/ˈæŋ.ɡjə.lər dɪsˈpleɪs.mənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The angle through which an object moves on a circular path.",
+            "example": "The angular displacement of the fan blade was 90 degrees."
+          }
+        ]
+      }
+    ]
+  },
+  "anode": {
+    "term": "Anode",
+    "phonetic": "/ˈæn.oʊd/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The electrode where oxidation occurs, often the positive terminal in a device.",
+            "example": "Electrons flow toward the anode in a galvanic cell."
+          }
+        ]
+      }
+    ]
+  },
+  "antinode": {
+    "term": "Antinode",
+    "phonetic": "/ˈæn.ti.noʊd/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A point of maximum amplitude on a standing wave.",
+            "example": "At the antinode, the wave's displacement is greatest."
+          }
+        ]
+      }
+    ]
+  },
+  "ampere": {
+    "term": "Ampere",
+    "phonetic": "/ˈæm.peər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The base unit of electric current in the International System of Units (SI).",
+            "example": "The fuse is rated for 5 amperes of current."
+          }
+        ]
+      }
+    ]
+  },
+  "attenuation": {
+    "term": "Attenuation",
+    "phonetic": "/əˌten.juˈeɪ.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The gradual loss in intensity of any kind of flux through a medium.",
+            "example": "Sound attenuation in air increases with distance."
+          }
+        ]
+      }
+    ]
+  },
+  "angularMomentum": {
+    "term": "Angular Momentum",
+    "phonetic": "/ˈæŋ.ɡjə.lər loʊˈmen.təm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The quantity of rotation of a body, measured by the product of its moment of inertia and angular velocity.",
+            "example": "A spinning skater pulls in her arms to conserve angular momentum."
+          }
+        ]
+      }
+    ]
+  },
+  "atmosphericPressure": {
+    "term": "Atmospheric Pressure",
+    "phonetic": "/ˌæt.məsˈfer.ɪk ˈpreʃ.ər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The pressure exerted by the weight of the atmosphere.",
+            "example": "Atmospheric pressure decreases with altitude."
+          }
+        ]
+      }
+    ]
+  },
+  "alternator": {
+    "term": "Alternator",
+    "phonetic": "/ˈɔːl.tə.neɪ.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device that generates alternating current by converting mechanical energy into electrical energy.",
+            "example": "The car’s alternator recharges the battery while the engine runs."
+          }
+        ]
+      }
+    ]
+  },
+  "atomicNumber": {
+    "term": "Atomic Number",
+    "phonetic": "/əˈtɒm.ɪk ˈnʌm.bər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The number of protons in the nucleus of an atom.",
+            "example": "Hydrogen has an atomic number of 1."
+          }
+        ]
+      }
+    ]
+  },
+  "atomicMass": {
+    "term": "Atomic Mass",
+    "phonetic": "/əˈtɒm.ɪk mæs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The mass of an atom, typically expressed in atomic mass units (amu).",
+            "example": "The atomic mass of carbon is about 12 amu."
+          }
+        ]
+      }
+    ]
+  },
+  "avogadroConstant": {
+    "term": "Avogadro Constant",
+    "phonetic": "/ˌæv.əˈɡɑː.drəʊ ˈkɒn.stənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The number of constituent particles in one mole of a substance, approximately 6.022 × 10²³.",
+            "example": "Avogadro's constant is crucial in mole calculations."
+          }
+        ]
+      }
+    ]
+  },
+  "avalancheEffect": {
+    "term": "Avalanche Effect",
+    "phonetic": "/ˈæv.əl.ɑːnʃ ɪˈfekt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A sudden and massive increase in current due to ionization in semiconductors.",
+            "example": "The diode failed due to the avalanche effect."
+          }
+        ]
+      }
+    ]
+  },
+  "antenna": {
+    "term": "Antenna",
+    "phonetic": "/ænˈten.ə/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device used to transmit or receive electromagnetic waves.",
+            "example": "The radio uses an antenna to receive signals."
+          }
+        ]
+      }
+    ]
+  },
+  "absorber": {
+    "term": "Absorber",
+    "phonetic": "/əbˈzɔː.bər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A material that takes in energy, especially radiation or sound.",
+            "example": "Lead is often used as a radiation absorber."
+          }
+        ]
+      }
+    ]
+  },
+  "adiabaticProcess": {
+    "term": "Adiabatic Process",
+    "phonetic": "/ˌeɪ.di.əˈbæt.ɪk ˈprəʊ.ses/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A thermodynamic process in which no heat is exchanged with the surroundings.",
+            "example": "In an adiabatic expansion, the system does work on the surroundings."
+          }
+        ]
+      }
+    ]
+  },
+  "angularAcceleration": {
+    "term": "Angular Acceleration",
+    "phonetic": "/ˈæŋ.ɡjə.lər əkˌseləˈreɪʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The rate of change of angular velocity.",
+            "example": "The disc had a uniform angular acceleration."
+          }
+        ]
+      }
+    ]
+  },
+  "astronomy": {
+    "term": "Astronomy",
+    "phonetic": "/əˈstrɒn.ə.mi/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The scientific study of celestial objects, space, and the universe as a whole.",
+            "example": "Astronomy helps us understand stars and planets."
+          }
+        ]
+      }
+    ]
+  },
+  "absorptionSpectrum": {
+    "term": "Absorption Spectrum",
+    "phonetic": "/əbˈzɔːp.ʃən ˈspek.trəm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A spectrum of absorbed light or radiation, showing dark lines or bands.",
+            "example": "The absorption spectrum of hydrogen reveals its energy levels."
+          }
+        ]
+      }
+    ]
+  },
+  "actuator": {
+    "term": "Actuator",
+    "phonetic": "/ˈæk.tʃu.eɪ.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device that converts energy into mechanical motion.",
+            "example": "Robots use actuators to move their limbs."
+          }
+        ]
+      }
+    ]
+  },
+  "atomicTheory": {
+    "term": "Atomic Theory",
+    "phonetic": "/əˈtɒm.ɪk ˈθɪə.ri/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A scientific theory stating that all matter is composed of atoms.",
+            "example": "Atomic theory forms the foundation of modern chemistry and physics."
+          }
+        ]
+      }
+    ]
+  },
+  "buoyancy": {
+    "term": "Buoyancy",
+    "phonetic": "/ˈbɔɪ.ən.si/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The ability or tendency of an object to float in a fluid.",
+            "example": "Wood floats on water because of its buoyancy."
+          }
+        ]
+      }
+    ]
+  },
+  "battery": {
+    "term": "Battery",
+    "phonetic": "/ˈbæt.ər.i/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device that stores chemical energy and converts it into electrical energy.",
+            "example": "The torch stopped working because the battery was dead."
+          }
+        ]
+      }
+    ]
+  },
+  "barometer": {
+    "term": "Barometer",
+    "phonetic": "/bəˈrɒm.ɪ.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An instrument measuring atmospheric pressure.",
+            "example": "The barometer showed a sudden drop in pressure, indicating a storm."
+          }
+        ]
+      }
+    ]
+  },
+  "baryon": {
+    "term": "Baryon",
+    "phonetic": "/ˈbær.i.ɒn/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A subatomic particle made up of three quarks, including protons and neutrons.",
+            "example": "Protons and neutrons are baryons."
+          }
+        ]
+      }
+    ]
+  },
+  "boilingPoint": {
+    "term": "Boiling Point",
+    "phonetic": "/ˈbɔɪ.lɪŋ pɔɪnt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The temperature at which a liquid turns into vapor.",
+            "example": "Water has a boiling point of 100°C at sea level."
+          }
+        ]
+      }
+    ]
+  },
+  "blackHole": {
+    "term": "Black Hole",
+    "phonetic": "/blæk hoʊl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A region in space where the gravitational pull is so strong that nothing, not even light, can escape.",
+            "example": "The black hole in the galaxy's center pulls in nearby matter."
+          }
+        ]
+      }
+    ]
+  },
+  "beam": {
+    "term": "Beam",
+    "phonetic": "/biːm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A stream of particles or waves, such as a beam of light or electrons.",
+            "example": "The laser emits a focused beam of light."
+          }
+        ]
+      }
+    ]
+  },
+  "backgroundRadiation": {
+    "term": "Background Radiation",
+    "phonetic": "/ˈbæk.ɡraʊnd ˌreɪ.diˈeɪ.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "Low-level natural radiation present in the environment.",
+            "example": "We are constantly exposed to background radiation from space and the Earth."
+          }
+        ]
+      }
+    ]
+  },
+  "betaDecay": {
+    "term": "Beta Decay",
+    "phonetic": "/ˈbeɪ.tə dɪˈkeɪ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A type of radioactive decay in which a beta particle is emitted.",
+            "example": "Beta decay changes a neutron into a proton or vice versa."
+          }
+        ]
+      }
+    ]
+  },
+  "bindingEnergy": {
+    "term": "Binding Energy",
+    "phonetic": "/ˈbaɪn.dɪŋ ˈen.ə.dʒi/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The energy required to separate a nucleus into its component nucleons.",
+            "example": "The binding energy explains the stability of atomic nuclei."
+          }
+        ]
+      }
+    ]
+  },
+  "brakingDistance": {
+    "term": "Braking Distance",
+    "phonetic": "/ˈbreɪ.kɪŋ ˈdɪs.təns/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The distance a vehicle travels while slowing to a stop after the brakes are applied.",
+            "example": "Braking distance increases with speed."
+          }
+        ]
+      }
+    ]
+  },
+  "balance": {
+    "term": "Balance",
+    "phonetic": "/ˈbæl.əns/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A state where opposing forces are equal, resulting in equilibrium.",
+            "example": "The seesaw is in balance when both sides are level."
+          }
+        ]
+      }
+    ]
+  },
+  "boyleLaw": {
+    "term": "Boyle's Law",
+    "phonetic": "/bɔɪlz lɔː/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A law stating that the pressure of a gas is inversely proportional to its volume at constant temperature.",
+            "example": "According to Boyle’s Law, decreasing volume increases pressure."
+          }
+        ]
+      }
+    ]
+  },
+  "bit": {
+    "term": "Bit",
+    "phonetic": "/bɪt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The basic unit of information in computing and digital communications, representing a binary value of 0 or 1.",
+            "example": "Each pixel in the image is stored using several bits."
+          }
+        ]
+      }
+    ]
+  },
+  "batteryCapacity": {
+    "term": "Battery Capacity",
+    "phonetic": "/ˈbæt.ər.i kəˈpæs.ə.ti/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The total amount of electric charge a battery can store.",
+            "example": "A higher battery capacity means longer device usage."
+          }
+        ]
+      }
+    ]
+  },
+  "bandwidth": {
+    "term": "Bandwidth",
+    "phonetic": "/ˈbænd.wɪdθ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The range of frequencies within a given band, especially used for transmitting a signal.",
+            "example": "Higher bandwidth allows faster data transfer."
+          }
+        ]
+      }
+    ]
+  },
+  "bimetallicStrip": {
+    "term": "Bimetallic Strip",
+    "phonetic": "/ˌbaɪ.meˈtæl.ɪk strɪp/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A strip made of two different metals that expands at different rates when heated.",
+            "example": "Bimetallic strips are used in thermostats."
+          }
+        ]
+      }
+    ]
+  },
+  "bohrModel": {
+    "term": "Bohr Model",
+    "phonetic": "/bɔːr ˈmɒd.əl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A model of the atom in which electrons orbit the nucleus at specific distances.",
+            "example": "The Bohr model explains the spectral lines of hydrogen."
+          }
+        ]
+      }
+    ]
+  },
+  "bernoulliPrinciple": {
+    "term": "Bernoulli's Principle",
+    "phonetic": "/bɜːˈnuː.li ˈprɪn.sə.pəl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A principle stating that an increase in fluid speed leads to a decrease in pressure.",
+            "example": "Bernoulli's principle explains how airplanes generate lift."
+          }
+        ]
+      }
+    ]
+  },
+  "boiling": {
+    "term": "Boiling",
+    "phonetic": "/ˈbɔɪ.lɪŋ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The rapid vaporization of a liquid when it reaches its boiling point.",
+            "example": "Boiling water produces steam."
+          }
+        ]
+      }
+    ]
+  },
+  "buffer": {
+    "term": "Buffer",
+    "phonetic": "/ˈbʌf.ər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device or material that reduces shock or protects from damage.",
+            "example": "The bumper acts as a buffer in car collisions."
+          }
+        ]
+      }
+    ]
+  },
+  "brake": {
+    "term": "Brake",
+    "phonetic": "/breɪk/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device for slowing or stopping motion, especially in vehicles.",
+            "example": "The driver applied the brake to avoid hitting the car ahead."
+          }
+        ]
+      }
+    ]
+  },
+  "bias": {
+    "term": "Bias",
+    "phonetic": "/ˈbaɪ.əs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A consistent voltage applied to a device to operate it in a certain mode.",
+            "example": "The diode requires a forward bias to conduct current."
+          }
+        ]
+      }
+    ]
+  },
+  "bolometer": {
+    "term": "Bolometer",
+    "phonetic": "/bəˈlɒm.ɪ.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An instrument for measuring radiation by detecting heat.",
+            "example": "Astronomers use bolometers to detect faint thermal emissions."
+          }
+        ]
+      }
+    ]
+  },
+  "biotSavartLaw": {
+    "term": "Biot–Savart Law",
+    "phonetic": "/biˈɒ səˈvɑː lɔː/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A law that describes the magnetic field generated by a current-carrying wire.",
+            "example": "The Biot–Savart Law helps calculate magnetic fields around wires."
+          }
+        ]
+      }
+    ]
+  },
+  "brightness": {
+    "term": "Brightness",
+    "phonetic": "/ˈbraɪt.nəs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The amount of light emitted or reflected by an object.",
+            "example": "The brightness of the bulb depends on its power rating."
+          }
+        ]
+      }
+    ]
+  },
+  "baseUnit": {
+    "term": "Base Unit",
+    "phonetic": "/beɪs ˈjuː.nɪt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A fundamental unit in the SI system from which all other units are derived.",
+            "example": "The meter is the base unit of length."
+          }
+        ]
+      }
+    ]
+  },
+  "bitRate": {
+    "term": "Bit Rate",
+    "phonetic": "/bɪt reɪt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The number of bits transmitted per second in a digital network.",
+            "example": "Streaming video at high quality requires a higher bit rate."
+          }
+        ]
+      }
+    ]
+  },
+  "booster": {
+    "term": "Booster",
+    "phonetic": "/ˈbuː.stər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device that increases power, pressure, or signal strength.",
+            "example": "The amplifier acts as a booster for the radio signal."
+          }
+        ]
+      }
+    ]
+  },
+  "capacitance": {
+    "term": "Capacitance",
+    "phonetic": "/kəˈpæs.ɪ.təns/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The ability of a system to store electric charge.",
+            "example": "The capacitance of a capacitor determines how much charge it can hold."
+          }
+        ]
+      }
+    ]
+  },
+  "capacitor": {
+    "term": "Capacitor",
+    "phonetic": "/kəˈpæs.ɪ.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An electronic component used to store energy in an electric field.",
+            "example": "The capacitor in the circuit stores charge and releases it when needed."
+          }
+        ]
+      }
+    ]
+  },
+  "cathode": {
+    "term": "Cathode",
+    "phonetic": "/ˈkæθ.oʊd/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The electrode at which reduction occurs; negatively charged in a discharging battery.",
+            "example": "Electrons enter the device through the cathode."
+          }
+        ]
+      }
+    ]
+  },
+  "centripetalForce": {
+    "term": "Centripetal Force",
+    "phonetic": "/sɛnˈtrɪp.ɪ.təl fɔːrs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A force that acts on a body moving in a circular path and is directed toward the center of the circle.",
+            "example": "Centripetal force keeps the car on its circular track."
+          }
+        ]
+      }
+    ]
+  },
+  "circuit": {
+    "term": "Circuit",
+    "phonetic": "/ˈsɜː.kɪt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A closed path through which an electric current flows or may flow.",
+            "example": "The circuit was broken, stopping the flow of current."
+          }
+        ]
+      }
+    ]
+  },
+  "conduction": {
+    "term": "Conduction",
+    "phonetic": "/kənˈdʌk.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The transfer of heat or electricity through a substance.",
+            "example": "Metal is a good conductor of heat due to conduction."
+          }
+        ]
+      }
+    ]
+  },
+  "conductor": {
+    "term": "Conductor",
+    "phonetic": "/kənˈdʌk.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A material that allows the flow of electrical current or heat.",
+            "example": "Copper is widely used as an electrical conductor."
+          }
+        ]
+      }
+    ]
+  },
+  "conservationOfEnergy": {
+    "term": "Conservation of Energy",
+    "phonetic": "/ˌkɒn.səˈveɪ.ʃən əv ˈen.ə.dʒi/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A principle stating that energy cannot be created or destroyed, only transformed.",
+            "example": "The conservation of energy is a fundamental concept in physics."
+          }
+        ]
+      }
+    ]
+  },
+  "convexLens": {
+    "term": "Convex Lens",
+    "phonetic": "/ˈkɒn.veks lɛnz/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A lens that is thicker in the middle than at the edges and converges light rays.",
+            "example": "A convex lens is used in magnifying glasses."
+          }
+        ]
+      }
+    ]
+  },
+  "concaveLens": {
+    "term": "Concave Lens",
+    "phonetic": "/ˈkɒn.keɪv lɛnz/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A lens that is thinner in the middle and diverges light rays.",
+            "example": "Concave lenses are used to correct short-sightedness."
+          }
+        ]
+      }
+    ]
+  },
+  "compression": {
+    "term": "Compression",
+    "phonetic": "/kəmˈpreʃ.ən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The region in a longitudinal wave where particles are closest together.",
+            "example": "Sound travels in compressions and rarefactions."
+          }
+        ]
+      }
+    ]
+  },
+  "charge": {
+    "term": "Charge",
+    "phonetic": "/tʃɑːrdʒ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A property of a body that experiences a force in an electric field.",
+            "example": "Electrons carry a negative charge."
+          }
+        ]
+      }
+    ]
+  },
+  "current": {
+    "term": "Current",
+    "phonetic": "/ˈkɜː.rənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The flow of electric charge in a conductor.",
+            "example": "The electric current flows from the battery through the wires."
+          }
+        ]
+      }
+    ]
+  },
+  "controlVariable": {
+    "term": "Control Variable",
+    "phonetic": "/kənˈtrəʊl ˈveə.ri.ə.bəl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A variable that is kept constant in an experiment.",
+            "example": "Temperature was a control variable in the physics experiment."
+          }
+        ]
+      }
+    ]
+  },
+  "centrifugalForce": {
+    "term": "Centrifugal Force",
+    "phonetic": "/ˌsen.trɪˈfjuː.ɡəl fɔːrs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An apparent force that acts outward on a body moving around a center.",
+            "example": "Centrifugal force is felt in a spinning ride."
+          }
+        ]
+      }
+    ]
+  },
+  "circuitBreaker": {
+    "term": "Circuit Breaker",
+    "phonetic": "/ˈsɜː.kɪt ˈbreɪ.kər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A safety device that stops the flow of current in an overloaded circuit.",
+            "example": "The circuit breaker tripped when the iron short-circuited."
+          }
+        ]
+      }
+    ]
+  },
+  "chemicalEnergy": {
+    "term": "Chemical Energy",
+    "phonetic": "/ˈkem.ɪ.kəl ˈen.ə.dʒi/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "Energy stored in the bonds of chemical compounds.",
+            "example": "Chemical energy in food is converted into mechanical energy in the body."
+          }
+        ]
+      }
+    ]
+  },
+  "coil": {
+    "term": "Coil",
+    "phonetic": "/kɔɪl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A loop or series of loops of wire, often used in electromagnets and inductors.",
+            "example": "A coil in the motor helps generate a magnetic field."
+          }
+        ]
+      }
+    ]
+  },
+  "cloudChamber": {
+    "term": "Cloud Chamber",
+    "phonetic": "/klaʊd ˈtʃeɪm.bər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device used to detect ionizing radiation by observing condensation trails.",
+            "example": "A cloud chamber shows the paths of alpha particles."
+          }
+        ]
+      }
+    ]
+  },
+  "coulomb": {
+    "term": "Coulomb",
+    "phonetic": "/ˈkuː.lɒm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The SI unit of electric charge.",
+            "example": "One coulomb is the charge transported by a current of one ampere in one second."
+          }
+        ]
+      }
+    ]
+  },
+  "criticalAngle": {
+    "term": "Critical Angle",
+    "phonetic": "/ˈkrɪt.ɪ.kəl ˈæŋ.ɡəl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The minimum angle of incidence at which total internal reflection occurs.",
+            "example": "Light hitting the surface at the critical angle reflects completely."
+          }
+        ]
+      }
+    ]
+  },
+  "compressible": {
+    "term": "Compressible",
+    "phonetic": "/kəmˈpres.ə.bəl/",
+    "meanings": [
+      {
+        "partOfSpeech": "adjective",
+        "definitions": [
+          {
+            "definition": "Capable of being compressed or reduced in volume.",
+            "example": "Gases are compressible unlike liquids."
+          }
+        ]
+      }
+    ]
+  },
+  "coefficient": {
+    "term": "Coefficient",
+    "phonetic": "/ˌkəʊ.ɪˈfɪʃ.ənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A numerical value that represents a physical property or relation.",
+            "example": "The coefficient of friction depends on the surfaces in contact."
+          }
+        ]
+      }
+    ]
+  },
+  "crescentWrench": {
+    "term": "Crescent Wrench",
+    "phonetic": "/ˈkrɛs.ənt rɛntʃ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A tool used to grip and turn objects such as nuts and bolts.",
+            "example": "The crescent wrench was used to tighten the nut in the physics lab."
+          }
+        ]
+      }
+    ]
+  },
+  "convection": {
+    "term": "Convection",
+    "phonetic": "/kənˈvek.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The transfer of heat by the movement of fluids (liquids or gases).",
+            "example": "Warm air rises due to convection currents."
+          }
+        ]
+      }
+    ]
+  },
+  "crest": {
+    "term": "Crest",
+    "phonetic": "/krɛst/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The highest point of a wave.",
+            "example": "The distance between two crests is the wavelength."
+          }
+        ]
+      }
+    ]
+  },
+  "compressionForce": {
+    "term": "Compression Force",
+    "phonetic": "/kəmˈpreʃ.ən fɔːrs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A force that squeezes or shortens a material.",
+            "example": "Pushing both ends of a spring creates a compression force."
+          }
+        ]
+      }
+    ]
+  },
+  "centerOfMass": {
+    "term": "Center of Mass",
+    "phonetic": "/ˈsen.tər əv mæs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The point where the mass of a body or system is concentrated.",
+            "example": "The center of mass of a uniform rod is at its midpoint."
+          }
+        ]
+      }
+    ]
+  },
+  "controlGroup": {
+    "term": "Control Group",
+    "phonetic": "/kənˈtrəʊl ɡruːp/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A group in an experiment that does not receive the experimental treatment.",
+            "example": "The control group was used for comparison in the heat conduction experiment."
+          }
+        ]
+      }
+    ]
+  },
+  "density": {
+    "term": "Density",
+    "phonetic": "/ˈden.sɪ.ti/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The mass of a substance per unit volume.",
+            "example": "The density of water is 1 g/cm³."
+          }
+        ]
+      }
+    ]
+  },
+  "displacement": {
+    "term": "Displacement",
+    "phonetic": "/dɪsˈpleɪs.mənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The change in position of an object in a specific direction.",
+            "example": "The car's displacement was 100 meters east."
+          }
+        ]
+      }
+    ]
+  },
+  "drag": {
+    "term": "Drag",
+    "phonetic": "/dræɡ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A force that opposes an object's motion through a fluid.",
+            "example": "Airplanes are designed to reduce air drag."
+          }
+        ]
+      }
+    ]
+  },
+  "diffraction": {
+    "term": "Diffraction",
+    "phonetic": "/dɪˈfræk.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The bending of waves around obstacles or through openings.",
+            "example": "Light undergoes diffraction when it passes through a narrow slit."
+          }
+        ]
+      }
+    ]
+  },
+  "dopplerEffect": {
+    "term": "Doppler Effect",
+    "phonetic": "/ˈdɒp.lər ɪˌfekt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An apparent change in the frequency of a wave caused by motion between the source and observer.",
+            "example": "The Doppler Effect explains why an ambulance siren changes pitch as it passes."
+          }
+        ]
+      }
+    ]
+  },
+  "diode": {
+    "term": "Diode",
+    "phonetic": "/ˈdaɪ.oʊd/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An electronic component that allows current to flow in only one direction.",
+            "example": "Diodes are used in circuits to prevent reverse current."
+          }
+        ]
+      }
+    ]
+  },
+  "dimension": {
+    "term": "Dimension",
+    "phonetic": "/daɪˈmen.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A measurable extent of a physical quantity, such as length, time, or mass.",
+            "example": "Length, time, and mass are examples of dimensions in physics."
+          }
+        ]
+      }
+    ]
+  },
+  "discharge": {
+    "term": "Discharge",
+    "phonetic": "/ˈdɪs.tʃɑːrdʒ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The flow of electric charge through a medium.",
+            "example": "Lightning is a natural example of electrical discharge."
+          }
+        ]
+      }
+    ]
+  },
+  "decibel": {
+    "term": "Decibel",
+    "phonetic": "/ˈdes.ɪ.bel/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A unit used to measure the intensity of a sound.",
+            "example": "Normal conversation is around 60 decibels."
+          }
+        ]
+      }
+    ]
+  },
+  "detector": {
+    "term": "Detector",
+    "phonetic": "/dɪˈtek.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device used to identify or measure physical quantities.",
+            "example": "Smoke detectors are used for safety in buildings."
+          }
+        ]
+      }
+    ]
+  },
+  "diffusion": {
+    "term": "Diffusion",
+    "phonetic": "/dɪˈfjuː.ʒən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The process of a substance spreading out to evenly fill its container or environment.",
+            "example": "The diffusion of gases is faster at higher temperatures."
+          }
+        ]
+      }
+    ]
+  },
+  "dielectric": {
+    "term": "Dielectric",
+    "phonetic": "/ˌdaɪ.ɪˈlek.trɪk/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A material that does not conduct electricity but can support an electrostatic field.",
+            "example": "Capacitors use dielectric materials to store charge."
+          }
+        ]
+      }
+    ]
+  },
+  "detector": {
+    "term": "Detector",
+    "phonetic": "/dɪˈtek.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device used to detect the presence of a specific type of energy or matter.",
+            "example": "A metal detector senses metallic objects underground."
+          }
+        ]
+      }
+    ]
+  },
+  "dynamics": {
+    "term": "Dynamics",
+    "phonetic": "/daɪˈnæm.ɪks/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The study of forces and motion of objects.",
+            "example": "Newton's laws form the basis of classical dynamics."
+          }
+        ]
+      }
+    ]
+  },
+  "digital": {
+    "term": "Digital",
+    "phonetic": "/ˈdɪdʒ.ɪ.təl/",
+    "meanings": [
+      {
+        "partOfSpeech": "adjective",
+        "definitions": [
+          {
+            "definition": "Involving or relating to the use of computer technology or binary signals.",
+            "example": "Digital thermometers provide quick temperature readings."
+          }
+        ]
+      }
+    ]
+  },
+  "directCurrent": {
+    "term": "Direct Current",
+    "phonetic": "/dəˈrekt ˈkɜː.rənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An electric current flowing in one direction only.",
+            "example": "Batteries produce direct current (DC)."
+          }
+        ]
+      }
+    ]
+  },
+  "diffusionCurrent": {
+    "term": "Diffusion Current",
+    "phonetic": "/dɪˈfjuː.ʒən ˈkɜː.rənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "Electric current caused by the movement of charge carriers from high to low concentration.",
+            "example": "Semiconductors use diffusion current in their operation."
+          }
+        ]
+      }
+    ]
+  },
+  "damping": {
+    "term": "Damping",
+    "phonetic": "/ˈdæm.pɪŋ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The gradual reduction of amplitude in oscillating systems.",
+            "example": "Shock absorbers in cars provide damping."
+          }
+        ]
+      }
+    ]
+  },
+  "deceleration": {
+    "term": "Deceleration",
+    "phonetic": "/ˌdiːˌsel.əˈreɪ.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A decrease in the speed or velocity of an object.",
+            "example": "The car experienced deceleration when the brakes were applied."
+          }
+        ]
+      }
+    ]
+  },
+  "diamagnetism": {
+    "term": "Diamagnetism",
+    "phonetic": "/ˌdaɪ.əˈmæɡ.nə.tɪ.zəm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A form of magnetism that causes a material to repel a magnetic field.",
+            "example": "Bismuth is known for its strong diamagnetism."
+          }
+        ]
+      }
+    ]
+  },
+  "diffuseReflection": {
+    "term": "Diffuse Reflection",
+    "phonetic": "/dɪˈfjuːs rɪˈflek.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "Reflection of light from a rough surface, scattering in many directions.",
+            "example": "Paper exhibits diffuse reflection rather than a clear image."
+          }
+        ]
+      }
+    ]
+  },
+  "dielectricStrength": {
+    "term": "Dielectric Strength",
+    "phonetic": "/ˌdaɪ.ɪˈlek.trɪk streŋkθ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The maximum electric field a material can withstand without breaking down.",
+            "example": "Dielectric strength is critical in insulating materials."
+          }
+        ]
+      }
+    ]
+  },
+  "diffusionOfLight": {
+    "term": "Diffusion of Light",
+    "phonetic": "/dɪˈfjuː.ʒən ʌv laɪt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The scattering of light as it passes through a translucent material.",
+            "example": "Frosted glass causes diffusion of light."
+          }
+        ]
+      }
+    ]
+  },
+  "deformation": {
+    "term": "Deformation",
+    "phonetic": "/ˌdiː.fɔːˈmeɪ.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A change in shape due to the application of force.",
+            "example": "Elastic deformation occurs when a spring is stretched."
+          }
+        ]
+      }
+    ]
+  },
+  "distribution": {
+    "term": "Distribution",
+    "phonetic": "/ˌdɪs.trɪˈbjuː.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The process of spreading something over an area, such as energy or charge.",
+            "example": "The electric charge distribution affects the field strength."
+          }
+        ]
+      }
+    ]
+  },
+  "driftVelocity": {
+    "term": "Drift Velocity",
+    "phonetic": "/drɪft vəˈlɒs.ə.ti/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The average velocity of electrons in a conductor due to an electric field.",
+            "example": "Drift velocity is proportional to current."
+          }
+        ]
+      }
+    ]
+  },
+  "darkMatter": {
+    "term": "Dark Matter",
+    "phonetic": "/dɑːrk ˈmæt.ər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A type of matter that does not emit light or energy and is detectable only through gravitational effects.",
+            "example": "Dark matter makes up a large part of the universe."
+          }
+        ]
+      }
+    ]
+  },
+  "domain": {
+    "term": "Domain",
+    "phonetic": "/dəʊˈmeɪn/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A region in a magnetic material where the magnetization is in a uniform direction.",
+            "example": "Domains align in a magnetized iron bar."
+          }
+        ]
+      }
+    ]
+  },
+  "electricity": {
+    "term": "Electricity",
+    "phonetic": "/ɪˌlekˈtrɪs.ə.ti/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A form of energy resulting from the existence of charged particles such as electrons or protons.",
+            "example": "Electricity powers lights and appliances in homes."
+          }
+        ]
+      }
+    ]
+  },
+  "energy": {
+    "term": "Energy",
+    "phonetic": "/ˈen.ə.dʒi/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The capacity to do work or cause physical change.",
+            "example": "Kinetic energy increases with the speed of an object."
+          }
+        ]
+      }
+    ]
+  },
+  "electromagnet": {
+    "term": "Electromagnet",
+    "phonetic": "/ɪˈlek.trəʊˌmæɡ.nət/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A magnet created by passing an electric current through a coil of wire.",
+            "example": "Electromagnets are used in electric bells and motors."
+          }
+        ]
+      }
+    ]
+  },
+  "electromagneticSpectrum": {
+    "term": "Electromagnetic Spectrum",
+    "phonetic": "/ɪˌlek.trəʊ.mæɡˈnɛt.ɪk ˈspɛk.trəm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The range of all types of electromagnetic radiation.",
+            "example": "The electromagnetic spectrum includes radio waves, visible light, and X-rays."
+          }
+        ]
+      }
+    ]
+  },
+  "electricCurrent": {
+    "term": "Electric Current",
+    "phonetic": "/ɪˈlek.trɪk ˈkʌr.ənt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The flow of electric charge through a conductor.",
+            "example": "Electric current is measured in amperes."
+          }
+        ]
+      }
+    ]
+  },
+  "electricField": {
+    "term": "Electric Field",
+    "phonetic": "/ɪˈlek.trɪk fiːld/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A region around a charged object where other charges experience a force.",
+            "example": "An electric field surrounds every charged particle."
+          }
+        ]
+      }
+    ]
+  },
+  "electricPotential": {
+    "term": "Electric Potential",
+    "phonetic": "/ɪˈlek.trɪk pəˈten.ʃəl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The amount of electric potential energy per unit charge at a point.",
+            "example": "Electric potential is measured in volts."
+          }
+        ]
+      }
+    ]
+  },
+  "electricCharge": {
+    "term": "Electric Charge",
+    "phonetic": "/ɪˈlek.trɪk tʃɑːrdʒ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A physical property of matter that causes it to experience a force in an electric field.",
+            "example": "Electrons have a negative electric charge."
+          }
+        ]
+      }
+    ]
+  },
+  "electrode": {
+    "term": "Electrode",
+    "phonetic": "/ɪˈlek.trəʊd/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A conductor through which electricity enters or leaves an object, substance, or region.",
+            "example": "Batteries contain electrodes that facilitate chemical reactions."
+          }
+        ]
+      }
+    ]
+  },
+  "electricCircuit": {
+    "term": "Electric Circuit",
+    "phonetic": "/ɪˈlek.trɪk ˈsɜː.kɪt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A closed loop or pathway that allows electricity to flow.",
+            "example": "A switch opens or closes an electric circuit."
+          }
+        ]
+      }
+    ]
+  },
+  "electromotiveForce": {
+    "term": "Electromotive Force",
+    "phonetic": "/ɪˌlek.trəʊˈməʊ.tɪv fɔːs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The energy provided by a source per unit charge.",
+            "example": "Electromotive force is measured in volts."
+          }
+        ]
+      }
+    ]
+  },
+  "electron": {
+    "term": "Electron",
+    "phonetic": "/ɪˈlek.trɒn/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A negatively charged subatomic particle found outside the nucleus of an atom.",
+            "example": "Electrons are involved in electrical conduction."
+          }
+        ]
+      }
+    ]
+  },
+  "elasticity": {
+    "term": "Elasticity",
+    "phonetic": "/ˌiː.læsˈtɪs.ə.ti/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The ability of a material to return to its original shape after being stretched or compressed.",
+            "example": "Rubber bands have high elasticity."
+          }
+        ]
+      }
+    ]
+  },
+  "elasticPotentialEnergy": {
+    "term": "Elastic Potential Energy",
+    "phonetic": "/ɪˌlæs.tɪk pəˈten.ʃəl ˈen.ə.dʒi/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The energy stored in an object when it is stretched or compressed.",
+            "example": "A stretched spring stores elastic potential energy."
+          }
+        ]
+      }
+    ]
+  },
+  "equilibrium": {
+    "term": "Equilibrium",
+    "phonetic": "/ˌiː.kwɪˈlɪb.ri.əm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A state where opposing forces or influences are balanced.",
+            "example": "An object at rest on a table is in equilibrium."
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "term": "Echo",
+    "phonetic": "/ˈek.oʊ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A sound that is reflected off a surface and heard again.",
+            "example": "Echoes are heard when sound waves bounce off walls."
+          }
+        ]
+      }
+    ]
+  },
+  "efficiency": {
+    "term": "Efficiency",
+    "phonetic": "/ɪˈfɪʃ.ən.si/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The ratio of useful output to total input in a system.",
+            "example": "An engine with high efficiency wastes less energy."
+          }
+        ]
+      }
+    ]
+  },
+  "electricPower": {
+    "term": "Electric Power",
+    "phonetic": "/ɪˈlek.trɪk ˈpaʊ.ər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The rate at which electrical energy is transferred by an electric circuit.",
+            "example": "Electric power is measured in watts."
+          }
+        ]
+      }
+    ]
+  },
+  "electrolysis": {
+    "term": "Electrolysis",
+    "phonetic": "/ɪˌlekˈtrɒl.ə.sɪs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The process of using electricity to split a compound into its elements.",
+            "example": "Water can be split into hydrogen and oxygen by electrolysis."
+          }
+        ]
+      }
+    ]
+  },
+  "electroscope": {
+    "term": "Electroscope",
+    "phonetic": "/ɪˈlek.trəˌskoʊp/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device used to detect electric charge.",
+            "example": "An electroscope shows the presence of static electricity."
+          }
+        ]
+      }
+    ]
+  },
+  "earth": {
+    "term": "Earth",
+    "phonetic": "/ɜːrθ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A point of zero electric potential used as a common reference in circuits.",
+            "example": "Electrical devices are earthed to prevent shock."
+          }
+        ]
+      }
+    ]
+  },
+  "electrostaticForce": {
+    "term": "Electrostatic Force",
+    "phonetic": "/ɪˌlek.trəʊˈstæt.ɪk fɔːrs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The force between two stationary electric charges.",
+            "example": "Electrostatic force can attract or repel objects."
+          }
+        ]
+      }
+    ]
+  },
+  "electricResistance": {
+    "term": "Electric Resistance",
+    "phonetic": "/ɪˈlek.trɪk rɪˈzɪs.təns/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The opposition that a material offers to the flow of electric current.",
+            "example": "Thin wires have more resistance than thick ones."
+          }
+        ]
+      }
+    ]
+  },
+  "electrostatics": {
+    "term": "Electrostatics",
+    "phonetic": "/ɪˌlek.trəˈstæt.ɪks/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The study of electric charges at rest.",
+            "example": "Electrostatics explains how objects become charged through friction."
+          }
+        ]
+      }
+    ]
+  },
+  "electricHeater": {
+    "term": "Electric Heater",
+    "phonetic": "/ɪˈlek.trɪk ˈhiː.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device that converts electric energy into heat.",
+            "example": "An electric heater is used to warm rooms during cold weather."
+          }
+        ]
+      }
+    ]
+  },
+  "electricMotor": {
+    "term": "Electric Motor",
+    "phonetic": "/ɪˈlek.trɪk ˈmoʊ.tər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A device that converts electrical energy into mechanical energy.",
+            "example": "Electric motors are used in fans and washing machines."
+          }
+        ]
+      }
+    ]
+  },
+  "electricFan": {
+    "term": "Electric Fan",
+    "phonetic": "/ɪˈlek.trɪk fæn/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A fan powered by electricity used for ventilation or cooling.",
+            "example": "An electric fan circulates air in a room."
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "term": "Expansion",
+    "phonetic": "/ɪkˈspæn.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The increase in size or volume of a substance when heated.",
+            "example": "Metals expand when heated due to thermal expansion."
+          }
+        ]
+      }
+    ]
+  },
+  "evaporation": {
+    "term": "Evaporation",
+    "phonetic": "/ɪˌvæp.əˈreɪ.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The process by which a liquid changes into a gas at its surface.",
+            "example": "Water in puddles disappears by evaporation."
+          }
+        ]
+      }
+    ]
+  },
+  "force": {
+    "term": "Force",
+    "phonetic": "/fɔːrs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A push or pull acting upon an object as a result of its interaction with another object.",
+            "example": "A force can change the motion of an object."
+          }
+        ]
+      }
+    ]
+  },
+  "friction": {
+    "term": "Friction",
+    "phonetic": "/ˈfrɪk.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The resistance that one surface or object encounters when moving over another.",
+            "example": "Friction between the tires and road helps a car to stop."
+          }
+        ]
+      }
+    ]
+  },
+  "frequency": {
+    "term": "Frequency",
+    "phonetic": "/ˈfriː.kwən.si/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The number of complete oscillations or cycles per second.",
+            "example": "Frequency is measured in hertz (Hz)."
+          }
+        ]
+      }
+    ]
+  },
+  "fluid": {
+    "term": "Fluid",
+    "phonetic": "/ˈfluː.ɪd/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A substance that has no fixed shape and yields easily to external pressure; a gas or (especially) a liquid.",
+            "example": "Water is a common example of a fluid."
+          }
+        ]
+      }
+    ]
+  },
+  "fuse": {
+    "term": "Fuse",
+    "phonetic": "/fjuːz/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A safety device consisting of a strip of wire that melts and breaks an electric circuit if the current exceeds a safe level.",
+            "example": "The fuse blew due to an electrical overload."
+          }
+        ]
+      }
+    ]
+  },
+  "focal_length": {
+    "term": "Focal Length",
+    "phonetic": "/ˈfoʊ.kəl leŋkθ/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The distance between the center of a lens or curved mirror and its focus.",
+            "example": "The focal length determines the magnifying power of a lens."
+          }
+        ]
+      }
+    ]
+  },
+  "farad": {
+    "term": "Farad",
+    "phonetic": "/ˈfær.æd/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The SI unit of electrical capacitance.",
+            "example": "One farad is a very large unit of capacitance."
+          }
+        ]
+      }
+    ]
+  },
+  "field": {
+    "term": "Field",
+    "phonetic": "/fiːld/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A region in which a particular condition exists, especially one in which a force or influence is exerted.",
+            "example": "A magnetic field surrounds a magnet."
+          }
+        ]
+      }
+    ]
+  },
+  "focus": {
+    "term": "Focus",
+    "phonetic": "/ˈfoʊ.kəs/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The point at which rays or waves meet after reflection or refraction.",
+            "example": "A lens brings light to a focus."
+          }
+        ]
+      }
+    ]
+  },
+  "frequency_modulation": {
+    "term": "Frequency Modulation",
+    "phonetic": "/ˈfriː.kwən.si ˌmɒd.jʊˈleɪ.ʃən/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A method of transmitting signals by changing the frequency of a wave.",
+            "example": "FM radio uses frequency modulation."
+          }
+        ]
+      }
+    ]
+  },
+  "free_fall": {
+    "term": "Free Fall",
+    "phonetic": "/friː fɔːl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The motion of a body where gravity is the only force acting upon it.",
+            "example": "An object in free fall accelerates at 9.8 m/s² on Earth."
+          }
+        ]
+      }
+    ]
+  },
+  "fluid_pressure": {
+    "term": "Fluid Pressure",
+    "phonetic": "/ˈfluː.ɪd ˈpreʃ.ər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The pressure at any point within a fluid due to the weight of the fluid above it.",
+            "example": "Fluid pressure increases with depth."
+          }
+        ]
+      }
+    ]
+  },
+  "flemings_left_hand_rule": {
+    "term": "Fleming's Left Hand Rule",
+    "phonetic": "/ˈfle.mɪŋz lɛft hænd ruːl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A rule to determine the direction of force on a current-carrying conductor in a magnetic field.",
+            "example": "Use Fleming's left hand rule in electric motors."
+          }
+        ]
+      }
+    ]
+  },
+  "flemings_right_hand_rule": {
+    "term": "Fleming's Right Hand Rule",
+    "phonetic": "/ˈfle.mɪŋz raɪt hænd ruːl/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A rule used to determine the direction of induced current when a conductor moves in a magnetic field.",
+            "example": "Generators work using Fleming’s right hand rule."
+          }
+        ]
+      }
+    ]
+  },
+  "focal_point": {
+    "term": "Focal Point",
+    "phonetic": "/ˈfoʊ.kəl pɔɪnt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The point at which rays converge after passing through a lens or reflecting from a mirror.",
+            "example": "A concave mirror focuses light at its focal point."
+          }
+        ]
+      }
+    ]
+  },
+  "ferromagnetism": {
+    "term": "Ferromagnetism",
+    "phonetic": "/ˌfer.oʊˈmæɡ.nə.tɪ.zəm/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A physical phenomenon where certain materials exhibit strong magnetic properties.",
+            "example": "Iron and nickel exhibit ferromagnetism."
+          }
+        ]
+      }
+    ]
+  },
+  "fuse_wire": {
+    "term": "Fuse Wire",
+    "phonetic": "/fjuːz waɪər/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A thin wire that melts to break the circuit when excessive current flows.",
+            "example": "Fuse wires are made from alloys with low melting points."
+          }
+        ]
+      }
+    ]
+  },
+  "field_lines": {
+    "term": "Field Lines",
+    "phonetic": "/fiːld laɪnz/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "Imaginary lines used to represent the direction and strength of a field.",
+            "example": "Magnetic field lines emerge from the north pole of a magnet."
+          }
+        ]
+      }
+    ]
+  },
+  "falling_object": {
+    "term": "Falling Object",
+    "phonetic": "/ˈfɔː.lɪŋ ˈɒb.dʒɪkt/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "An object that is under the influence of gravity.",
+            "example": "A falling object accelerates uniformly."
+          }
+        ]
+      }
+    ]
+  },
+  "fluid_dynamics": {
+    "term": "Fluid Dynamics",
+    "phonetic": "/ˈfluː.ɪd daɪˈnæm.ɪks/",
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The study of fluids in motion.",
+            "example": "Fluid dynamics explains how air moves around airplane wings."
+          }
+        ]
+      }
+    ]
+  },
+          
