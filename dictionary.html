@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticAce - Science Dictionary</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #F8F5F0;
+            color: #333333;
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        :root {
+            --deep-cobalt: #0047AB;
+            --vibrant-orange: #FF7F11;
+            --leafy-green: #4CAF50;
+            --charcoal-gray: #333333;
+            --soft-ivory: #F8F5F0;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1001;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .side-menu.active {
+            right: 0;
+        }
+        
+        .side-menu ul {
+            list-style: none;
+            margin-top: 60px;
+        }
+        
+        .side-menu li {
+            margin-bottom: 20px;
+        }
+        
+        .side-menu a {
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .side-menu a:hover {
+            color: var(--deep-cobalt);
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: var(--deep-cobalt);
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--vibrant-orange);
+            padding-bottom: 10px;
+        }
+        
+        .search-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .search-box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-input:focus {
+            border-color: var(--deep-cobalt);
+        }
+        
+        .search-btn {
+            background-color: var(--deep-cobalt);
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 5px 5px 0;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-btn:hover {
+            background-color: #00367d;
+        }
+        
+        .results-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 200px;
+            display: none;
+        }
+        
+        .term-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--leafy-green);
+        }
+        
+        .term-name {
+            font-size: 28px;
+            color: var(--deep-cobalt);
+        }
+        
+        .term-type {
+            background-color: var(--vibrant-orange);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .term-definition {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .term-example {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid var(--leafy-green);
+            font-style: italic;
+            margin: 20px 0;
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            padding: 40px 0;
+        }
+        
+        .loader {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .loader-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--deep-cobalt);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .phonetics {
+            margin-bottom: 15px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .definition-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .definition-item:last-child {
+            border-bottom: none;
+        }
+        
+        footer {
+            background-color: var(--deep-cobalt);
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .contact-info a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        .suggestions-container {
+            position: absolute;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: calc(100% - 25px);
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .suggestion-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .suggestion-item:hover {
+            background-color: #f0f8ff;
+        }
+        
+        @media (max-width: 600px) {
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .search-btn {
+                border-radius: 5px;
+                padding: 12px;
+            }
+            
+            .term-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .term-type {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">PracticAce</a>
+        <div class="menu-icon" id="menuIcon">☰</div>
+    </header>
+    
+    <div class="side-menu" id="sideMenu">
+        <div class="close-menu" id="closeMenu">×</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mission-vision.html">Mission and Vision</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="lab-manual.html">Lab Manual</a></li>
+            <li><a href="practical-videos.html">Practical Videos</a></li>
+            <li><a href="dictionary.html">Dictionary</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h1>Science Dictionary</h1>
+        
+        <div class="search-container">
+            <h2>Search for Science Terms</h2>
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="Enter a science term...">
+                <button class="search-btn" id="searchBtn">Search</button>
+            </div>
+            <div class="suggestions-container" id="suggestionsContainer"></div>
+            <p>Look up definitions for physics, chemistry, and biology terms</p>
+        </div>
+        
+        <div class="loader" id="loader">
+            <div class="loader-spinner"></div>
+            <p>Searching...</p>
+        </div>
+        
+        <div class="results-container" id="resultsContainer">
+            <div class="no-results" id="noResults">
+                No results found. Try searching for a science term.
+            </div>
+            
+            <div id="resultsContent" style="display: none;">
+                <div class="term-header">
+                    <h2 class="term-name" id="termName">Term</h2>
+                    <span class="term-type" id="termType">noun</span>
+                </div>
+                <div class="phonetics" id="phonetics"></div>
+                <div id="definitionsList"></div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mission-vision.html">Mission and Vision</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="lab-manual.html">Lab Manual</a></li>
+                    <li><a href="practical-videos.html">Practical Videos</a></li>
+                    <li><a href="dictionary.html">Dictionary</a></li>
+                </ul>
+            </div>
+            <div class="footer-links contact-info">
+                <h3>Contact Us</h3>
+                <a href="tel:08080164223">08080164223</a>
+                <a href="tel:09165452817">09165452817</a>
+                <a href="mailto:PracticAce@gmail.com">PracticAce@gmail.com</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 PracticAce. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Menu Toggle
+        const menuIcon = document.getElementById('menuIcon');
+        const closeMenu = document.getElementById('closeMenu');
+        const sideMenu = document.getElementById('sideMenu');
+        
+        menuIcon.addEventListener('click', () => sideMenu.classList.add('active'));
+        closeMenu.addEventListener('click', () => sideMenu.classList.remove('active'));
+        
+        // Dictionary Data (Embedded JSON for this example)
+        // In a real implementation, this would be loaded from an external JSON file
+        const scienceDictionary = {
+            "photosynthesis": {
+                "term": "Photosynthesis",
+                "phonetic": "/ˌfoʊ.t̬oʊˈsɪn.θə.sɪs/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "The process by which green plants and some other organisms use sunlight to synthesize foods from carbon dioxide and water.",
+                                "example": "Photosynthesis in plants generally involves the green pigment chlorophyll."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "mitosis": {
+                "term": "Mitosis",
+                "phonetic": "/maɪˈtoʊ.sɪs/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "A type of cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent nucleus.",
+                                "example": "Mitosis is essential for the growth and repair of tissues."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "gravity": {
+                "term": "Gravity",
+                "phonetic": "/ˈɡræv.ə.ti/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "The force that attracts a body toward the center of the earth, or toward any other physical body having mass.",
+                                "example": "The gravity of the moon causes the ocean tides on Earth."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "atom": {
+                "term": "Atom",
+                "phonetic": "/ˈæt.əm/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "The basic unit of a chemical element, consisting of a nucleus of protons and neutrons, with electrons in orbit around the nucleus.",
+                                "example": "The structure of an atom determines the chemical properties of an element."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "dna": {
+                "term": "DNA",
+                "phonetic": "/ˌdiː.enˈeɪ/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "Deoxyribonucleic acid, a self-replicating material that carries genetic information in nearly all living organisms.",
+                                "example": "DNA sequencing has revolutionized the field of genetics."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "ecosystem": {
+                "term": "Ecosystem",
+                "phonetic": "/ˈiː.koʊˌsɪs.təm/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "A biological community of interacting organisms and their physical environment.",
+                                "example": "The coral reef ecosystem is particularly vulnerable to climate change."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "evolution": {
+                "term": "Evolution",
+                "phonetic": "/ˌev.əˈluː.ʃən/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "The process by which different kinds of living organisms are thought to have developed from earlier forms.",
+                                "example": "Darwin's theory of evolution revolutionized biology."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "quantum": {
+                "term": "Quantum",
+                "phonetic": "/ˈkwɑːn.təm/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "The smallest discrete quantity of some physical property that a system can possess.",
+                                "example": "Quantum mechanics describes the behavior of particles at the atomic and subatomic level."
+                            }
+                        ]
+                    },
+                    {
+                        "partOfSpeech": "adjective",
+                        "definitions": [
+                            {
+                                "definition": "Relating to quantum theory.",
+                                "example": "Quantum computing is an emerging technology with great potential."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "respiration": {
+                "term": "Respiration",
+                "phonetic": "/ˌres.pɪˈreɪ.ʃən/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "The process of breathing and the metabolic processes that release energy from organic molecules.",
+                                "example": "Aerobic respiration requires oxygen to produce energy."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "molecule": {
+                "term": "Molecule",
+                "phonetic": "/ˈmɑː.lɪ.kjuːl/",
+                "meanings": [
+                    {
+                        "partOfSpeech": "noun",
+                        "definitions": [
+                            {
+                                "definition": "A group of atoms bonded together, representing the smallest fundamental unit of a chemical compound.",
+                                "example": "A water molecule consists of two hydrogen atoms and one oxygen atom."
+                            }
+                        ]
+                    }
+                ]
+            }
+        };
+
+       // Dictionary Search Functionality
+const searchBtn = document.getElementById('searchBtn');
+const searchInput = document.getElementById('searchInput');
+const loader = document.getElementById('loader');
+const resultsContainer = document.getElementById('resultsContainer');
+const resultsContent = document.getElementById('resultsContent');
+const noResults = document.getElementById('noResults');
+const termName = document.getElementById('termName');
+const termType = document.getElementById('termType');
+const phonetics = document.getElementById('phonetics');
+const definitionsList = document.getElementById('definitionsList');
+const suggestionsContainer = document.getElementById('suggestionsContainer');
+
+// Dictionary data and terms
+let scienceDictionary = {};
+let dictionaryTerms = [];
+
+// Load JSON dictionary file
+fetch('science_dictionary.json')
+  .then(response => response.json())
+  .then(data => {
+    scienceDictionary = data;
+    dictionaryTerms = Object.keys(scienceDictionary);
+  })
+  .catch(error => console.error('Error loading dictionary:', error));
+
+// Search function using JSON data
+function searchTerm(term) {
+  // Show loading state
+  loader.style.display = 'block';
+  resultsContainer.style.display = 'block';
+  resultsContent.style.display = 'none';
+  noResults.style.display = 'none';
+  
+  // Simulate loading delay for UX
+  setTimeout(() => {
+    try {
+      // Normalize the term for case-insensitive search
+      const normalizedTerm = term.toLowerCase();
+      
+      // Find matching term in dictionary
+      const data = scienceDictionary[normalizedTerm];
+      
+      if (data) {
+        // Clear previous results
+        definitionsList.innerHTML = '';
+        
+        // Display word information
+        termName.textContent = data.term || term;
+        termType.textContent = data.meanings[0].partOfSpeech || 'unknown';
+        
+        // Display phonetics if available
+        phonetics.innerHTML = data.phonetic ? 
+          `<strong>Pronunciation:</strong> ${data.phonetic}` : '';
+        
+        // Process and display definitions
+        if (data.meanings && data.meanings.length > 0) {
+          data.meanings.forEach(meaning => {
+            meaning.definitions.forEach(def => {
+              const definitionItem = document.createElement('div');
+              definitionItem.className = 'definition-item';
+              
+              definitionItem.innerHTML = `
+                <div class="term-type">${meaning.partOfSpeech || 'unknown'}</div>
+                <div class="term-definition">${def.definition || 'No definition available'}</div>
+              `;
+              
+              if (def.example) {
+                const exampleDiv = document.createElement('div');
+                exampleDiv.className = 'term-example';
+                exampleDiv.textContent = def.example;
+                definitionItem.appendChild(exampleDiv);
+              }
+              
+              definitionsList.appendChild(definitionItem);
+            });
+          });
+          
+          resultsContent.style.display = 'block';
+          noResults.style.display = 'none';
+        } else {
+          throw new Error('No definitions found');
+        }
+      } else {
+        throw new Error('Term not found in dictionary');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      resultsContent.style.display = 'none';
+      noResults.style.display = 'block';
+      noResults.textContent = error.message.includes('not found') 
+        ? 'Term not found in dictionary. Please try another word.'
+        : 'Error loading results. Please try again.';
+    } finally {
+      loader.style.display = 'none';
+    }
+  }, 300);
+}
+
+// Autocomplete functionality
+function showSuggestions(input) {
+  suggestionsContainer.innerHTML = '';
+  if (input.length < 2) {
+    suggestionsContainer.style.display = 'none';
+    return;
+  }
+  
+  const filteredTerms = dictionaryTerms.filter(term => 
+    term.toLowerCase().includes(input.toLowerCase())
+  ).slice(0, 8);
+  
+  if (filteredTerms.length === 0) {
+    suggestionsContainer.style.display = 'none';
+    return;
+  }
+  
+  filteredTerms.forEach(term => {
+    const suggestionItem = document.createElement('div');
+    suggestionItem.className = 'suggestion-item';
+    suggestionItem.textContent = term;
+    suggestionItem.addEventListener('click', () => {
+      searchInput.value = term;
+      suggestionsContainer.style.display = 'none';
+      searchTerm(term);
+    });
+    suggestionsContainer.appendChild(suggestionItem);
+  });
+  
+  suggestionsContainer.style.display = 'block';
+}
+
+// Event listeners
+searchBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const term = searchInput.value.trim();
+  if (term) {
+    searchTerm(term);
+    suggestionsContainer.style.display = 'none';
+  }
+});
+
+searchInput.addEventListener('input', (e) => {
+  showSuggestions(e.target.value);
+});
+
+searchInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    const term = searchInput.value.trim();
+    if (term) {
+      searchTerm(term);
+      suggestionsContainer.style.display = 'none';
+    }
+  }
+});
+
+// Hide suggestions when clicking elsewhere
+document.addEventListener('click', (e) => {
+  if (!searchInput.contains(e.target) && 
+    !suggestionsContainer.contains(e.target)) {
+    suggestionsContainer.style.display = 'none';
+  }
+});
+
+// Initialize with empty results container
+resultsContainer.style.display = 'none';
+    </script>
+</body>
+</html>
